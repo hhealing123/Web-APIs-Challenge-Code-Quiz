@@ -87,7 +87,8 @@ function startQuiz(){
     timerInterval = setInterval(function() {
         secondsLeft--;
         quizTimer.textContent = "Time left: " + secondsLeft + "s...";
-        if(secondsLeft === 0) {
+        // The timer/quiz will end if timer reaches 0 seconds or below.
+        if(secondsLeft <= 0) {
           clearInterval(timerInterval);
           displayScore();
         }
@@ -185,6 +186,8 @@ function checkAnswers(answer) {
         //display in the results div that the answer is correct.
     } else if (answer !== correct && presentIndex !== questionIndex) {
         alert("Sorry... That is not a correct answer!")
+        // This will decrease time by 10 seconds whenever the user gets the question wrong.
+        secondsLeft = secondsLeft - 10;
         presentIndex++;
         startQuizQuestions();
         //display in the results div that the answer is wrong.
