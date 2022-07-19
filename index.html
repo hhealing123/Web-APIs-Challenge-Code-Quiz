@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web APIs Challenge: Code Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div id="instruction">
+            <h1>Coding Quiz Challenge</h1>
+            <h2>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</h2>
+            <button id="startButton">Start Quiz</button>
+            <button id="highScores" onclick="scoreRecord()">View High Scores</button>
+        </div>
+
+        <div id="quiz">
+            <div id="timer">Time left: </div>
+                <div id="questions"></div>
+                    <button id="choiceA" onclick="checkAnswers('A')">A</button>
+                    <button id="choiceB" onclick="checkAnswers('B')">B</button>
+                    <button id="choiceC" onclick="checkAnswers('C')">C</button>
+                    <button id="choiceD" onclick="checkAnswers('D')">D</button>
+                <div id="result"></div>
+        </div>
+
+        <div id="gameover">
+            <div id="finalScore"></div>
+            <input type="text" size = 50 placeholder="Please enter your initials for record your score!" name="intials" id="initials"/>
+            <button id="submitScore">Submit Score</button>
+        </div>
+
+        <div id="scoreContainer">
+
+        <div id="scorePage">
+            <div id="scoreHeader">
+                <h3>User's Initials</h3>
+                <h3>User's Scores</h3>
+            </div>
+            <div id="scoreInitials"></div>
+            <div id="highestScore"></div>
+        </div>
+
+        <div id="endGameButton">
+            <button id="playAgain" onclick="restartQuiz()">Play Again</button>
+            <button id="clearHighscore" onclick="clearScore()">Clear Highscores</button>
+        </div>
+
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+
+
+</body>
+
+</html>

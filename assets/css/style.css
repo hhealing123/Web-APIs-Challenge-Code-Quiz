@@ -1,0 +1,147 @@
+body {
+    background-color: #9fb7ff;
+}
+
+.container {
+    height: 55em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+#instruction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1, h2 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    background-color: rgb(31, 21, 161);
+    text-align: center;
+    border-style: none;
+    color: white;
+    padding: 15px;
+    width: 200px;
+    margin-top: 5px;    
+}
+
+li:hover, button:hover {
+    background-color: rgb(161, 37, 161);
+}
+
+#quiz {
+    display: none;
+    border: green;
+    border-style: solid;
+    border-width: thin;
+}
+
+#endGameButton {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#result {
+    display: none;
+}
+
+p {
+    color: black;
+    text-align: center;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#timer{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #5e6df1;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+}
+
+#gameover {
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#finalScore{
+    padding-bottom: 0.5rem;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+input {
+    text-align: center;
+}
+
+#initials {
+    margin: .5rem;
+    height: 1.75rem;
+}
+
+#scoreContainer {
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#highScore {
+    height: 1.5rem;
+    border: groove 2px;
+}
+
+#scorePage {
+    display: none;
+    width: 50%;
+    border: solid;
+    padding-bottom: 1em;
+    background: #a5c6e2;
+}
+
+#scoreHeader {
+    display:flex;
+    justify-content: space-around;
+    border-bottom-style: inset;
+    margin-bottom: .5rem;
+    background-color: #5e6df1;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#scoreInitials {
+    float: left;
+    padding-left: 7.5em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+#highestScore {
+    float: right;
+    padding-right: 6.5em;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+li {
+    color: white;
+    list-style-type: none;
+}
