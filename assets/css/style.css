@@ -2,12 +2,6 @@ body {
     background-color: #9fb7ff;
 }
 
-.img {
-    display: inline-block;
-    width: 300px;
-    height: 300px;
-}
-
 .container {
     height: 55em;
     display: flex;
