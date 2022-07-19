@@ -101,7 +101,7 @@ function displayScore() {
     gameoverEl.style.display = "flex";
     clearInterval(timerInterval);
     initialsEl.value = "";
-    finalScoreEl.innerHTML = "Congratulation! You got " + score + " out of " + quizQuestions.length + "questions correct!";
+    finalScoreEl.innerHTML = "Congratulation! You got " + score + " out of " + quizQuestions.length + " questions correct!";
 }
 
 /* Using the below "addEventListener" will allow user to submit their score. Also, the "localStorage" will store data of scores attained from the users.
@@ -136,14 +136,14 @@ submitScoreEl.addEventListener("click", function highscore() {
 function saveScore() {
     scoreInitialsEl.innerHTML = "";
     highestScoreEl.innerHTML = "";
-    var highscores = JSON.parse(localStorage.getItem("savedScores"));
+    var highscores = JSON.parse(localStorage.getItem("savedScores")) || [];
     for (i = 0; i < highscores.length; i++){
-        var newNameSpan = document.createElement("li");
-        var newScoreSpan = document.createElement("li");
-        newNameSpan.textContent = highscores[i].name;
-        newScoreSpan.textContent = highscores[i].score;
-        scoreInitialsEl.appendChild(newNameSpan);
-        highestScoreEl.appendChild(newScoreSpan);
+        var newName = document.createElement("li");
+        var newScore = document.createElement("li");
+        newName.textContent = highscores[i].name;
+        newScore.textContent = highscores[i].score;
+        scoreInitialsEl.appendChild(newName);
+        highestScoreEl.appendChild(newScore);
     }
 }
 
